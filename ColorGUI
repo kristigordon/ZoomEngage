@@ -7,6 +7,7 @@ and sets the color of all the buttons to the selected color.
 
 Using tkinter, I was able to create a GridGUI class to add additional functionality to a video conferencing software, such as Zoom.
 
+<code>
 import tkinter as tk
 from tkinter.colorchooser import askcolor
 
@@ -73,3 +74,4 @@ class GridGUI:
 gui = GridGUI(8, 8)
 # Run the GUI
 gui.run()
+</code>
