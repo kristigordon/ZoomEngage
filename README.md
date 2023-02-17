@@ -37,3 +37,7 @@ SO many companies are trying to compete in the video conferencing arena. But the
 
 <img width="481" alt="Screen Shot 2023-02-16 at 5 30 32 PM" src="https://user-images.githubusercontent.com/66803124/219513900-ea32c2a7-6612-4c60-9c7a-b9892f85c549.png">
 
+<img width="748" alt="Screen Shot 2023-02-16 at 7 59 24 PM" src="https://user-images.githubusercontent.com/66803124/219522726-63c94c1c-6a03-47cc-8f44-2a5a531d4b22.png">
+
+
+
