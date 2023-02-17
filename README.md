@@ -58,8 +58,33 @@ Web technologies: It would likely involve the use of web technologies such as HT
 5. Allow the user to change the size of each box individually by dragging its borders. As the user changes the size of a box, adjust the size of the other boxes accordingly to maintain the desired proportions.
 6. If the user does not manually resize any boxes, display the boxes with the predetermined sizes based on their priority.
 
+### To create color selector GUI for the ZOOM grid using Tkinter:
+1. Import the necessary modules: tkinter for creating the GUI, and askcolor from tkinter.colorchooser for opening a color selection dialog.
+2. Define a Grid class that represents a grid of buttons, with methods for setting and getting the color of each button.
+3. In the __init__ method of the Grid class, initialize the grid with the specified number of rows and columns, and set the colors of all buttons to white.
+4. Define a GridGUI class that represents the GUI for the grid of buttons, with methods for handling button clicks and the color picker dialog.
+5. In the __init__ method of the GridGUI class:
+6. Create a new Grid object with the specified number of rows and columns.
+7. Create a new tkinter window (self.root).
+8. Create a 2D list of tkinter buttons, one for each button in the grid, and add them to the window. Each button is configured to call the on_button_click method with its row and column as arguments when it is clicked.
+9. Create a tkinter button for opening the color selection dialog (self.color_picker_button), and add it to the window. When this button is clicked, it calls the on_color_picker_click method.
+10. In the on_button_click method of the GridGUI class:
+11. Get the current color of the button that was clicked using the Grid object's get_color method.
+12. Toggle the color of the button between black and white.
+13. Set the new color of the button using the Grid object's set_color method.
+14. Update the background color of the button using the tkinter configure method.
+15. In the on_color_picker_click method of the GridGUI class:
+16. Open a color selection dialog using the askcolor method, and get the selected color.
+17. Set the color of all buttons in the grid using the Grid object's set_color method.
+18. Update the background color of all buttons in the grid using the tkinter configure method.
+19. Define a run method in the GridGUI class that starts the tkinter main loop to display the window.
+20. Create a new GridGUI object with the specified number of rows and columns.
+21. Run the GUI using the run method of the GridGUI object.
 
 
+
+Information used to better understand ZOOM came from their community page and blog. 
+https://support.zoom.us/hc/en-us/articles/201362323-Adjusting-your-video-layout-during-a-virtual-meeting
 
 
 
