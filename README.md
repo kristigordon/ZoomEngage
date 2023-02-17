@@ -50,14 +50,6 @@ User interface: This solution involves creating a custom user interface that all
 
 Web technologies: It would likely involve the use of web technologies such as HTML, CSS, and JavaScript to create the user interface and handle user input.
 
-#### To create the Grid Resizing Solution:
-1. Retrieve the list of participants and their current status (mic on/off, video on/off, screen sharing on/off) from the Zoom API.
-2. Calculate the priority for each participant based on their status, following the order given in the prompt (screen share > mic+camera on > mic on > camera on > mic+camera off).
-3. Sort the list of participants based on their priority, from highest to lowest.
-4. Determine the desired size of each box for each participant, based on their priority. For example, the largest screen share participant might get 2/3 of the screen, while the smallest mic+camera off participant might get 1/6 of the screen.
-5. Allow the user to change the size of each box individually by dragging its borders. As the user changes the size of a box, adjust the size of the other boxes accordingly to maintain the desired proportions.
-6. If the user does not manually resize any boxes, display the boxes with the predetermined sizes based on their priority.
-
 ### To create color selector GUI for the ZOOM grid using Tkinter:
 1. Import the necessary modules: tkinter for creating the GUI, and askcolor from tkinter.colorchooser for opening a color selection dialog.
 2. Define a Grid class that represents a grid of buttons, with methods for setting and getting the color of each button.
@@ -81,6 +73,36 @@ Web technologies: It would likely involve the use of web technologies such as HT
 20. Create a new GridGUI object with the specified number of rows and columns.
 21. Run the GUI using the run method of the GridGUI object.
 
+### To create the Grid Resizing Solution:
+
+Get the list of participants in the Zoom call using the Zoom API. This is necessary to determine the status of each participant (mic on/off, video on/off, screen sharing on/off), which is used to calculate participant priorities.
+
+Calculate participant priorities based on their status, as follows:
+
+Participants with screen sharing on have the highest priority.
+Participants with both mic and video on have the second-highest priority.
+Participants with mic on and video off have the third-highest priority.
+Participants with mic off and video on have the fourth-highest priority.
+Participants with both mic and video off have the lowest priority.
+This prioritization ensures that participants who are actively contributing to the call (e.g. by screen sharing or having their video and mic on) are given more screen real estate.
+
+Set the default box sizes based on participant priorities. The largest box will be allocated to the participant with the highest priority (screen sharing on), and the remaining boxes will be allocated in descending order of priority.
+
+Create a custom user interface that allows the user to resize the boxes of the participants. This could be done using HTML, CSS, and JavaScript but will depend on the exact specifications of Zoom's environment. 
+
+Implement logic to adjust the box sizes based on user input. When the user resizes a box, the size of the adjacent boxes should be adjusted to maintain the overall layout of the call.
+
+Test the solution to ensure that it works as intended. This may involve testing with a variety of different call scenarios (e.g. different numbers of participants, different status combinations) to ensure that the box sizes are allocated correctly and can be resized by the user.
+
+Deploy the solution to a web server or cloud platform so that it can be accessed by users. This could be done using services like AWS Elastic Beanstalk since Zoom is already integrated into the AWS Cloud. 
+
+##### Coding steps are as follows:
+1. Retrieve the list of participants and their current status (mic on/off, video on/off, screen sharing on/off) from the Zoom API.
+2. Calculate the priority for each participant based on their status, following the order given in the prompt (screen share > mic+camera on > mic on > camera on > mic+camera off).
+3. Sort the list of participants based on their priority, from highest to lowest.
+4. Determine the desired size of each box for each participant, based on their priority. For example, the largest screen share participant might get 2/3 of the screen, while the smallest mic+camera off participant might get 1/6 of the screen.
+5. Allow the user to change the size of each box individually by dragging its borders. As the user changes the size of a box, adjust the size of the other boxes accordingly to maintain the desired proportions.
+6. If the user does not manually resize any boxes, display the boxes with the predetermined sizes based on their priority.
 
 
 Information used to better understand ZOOM came from their community page and blog. 
