@@ -1,5 +1,5 @@
 # Zoom Engage
-
+<p align="center">
 <img width="822" alt="Screen Shot 2023-02-16 at 5 03 26 PM" src="https://user-images.githubusercontent.com/66803124/219512395-1fd8852c-70e2-4f8a-a8b7-2a58adb528f5.png">
 
 Engage busts out of the black square grid and allows the user to show their creativity while increasing productivity. Engage will make collaboration easier, more effective, and much more enjoyable.
@@ -39,7 +39,7 @@ SO many companies are trying to compete in the video conferencing arena. But the
 
 
 <img width="750" alt="Screen Shot 2023-02-16 at 8 23 22 PM" src="https://user-images.githubusercontent.com/66803124/219525615-2735fc31-edef-4c9b-8fea-b7469843353c.png">
-
+</center>
 Zoom API: The Zoom API (Application Programming Interface) is a set of rules and protocols that allows software applications to interact with the Zoom platform. This solution uses the Zoom API to retrieve the list of participants and their current status (mic on/off, video on/off, screen sharing on/off).
 
 Zoom video SDK: Another option for creating a custom video conferencing solution with Zoom is to use the Zoom video SDK (Software Development Kit). The video SDK provides more control over the video conferencing experience and allows for the creation of custom interfaces and features.
