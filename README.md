@@ -37,7 +37,31 @@ SO many companies are trying to compete in the video conferencing arena. But the
 
 <img width="481" alt="Screen Shot 2023-02-16 at 5 30 32 PM" src="https://user-images.githubusercontent.com/66803124/219513900-ea32c2a7-6612-4c60-9c7a-b9892f85c549.png">
 
-<img width="748" alt="Screen Shot 2023-02-16 at 7 59 24 PM" src="https://user-images.githubusercontent.com/66803124/219522726-63c94c1c-6a03-47cc-8f44-2a5a531d4b22.png">
+
+<img width="750" alt="Screen Shot 2023-02-16 at 8 23 22 PM" src="https://user-images.githubusercontent.com/66803124/219525615-2735fc31-edef-4c9b-8fea-b7469843353c.png">
+
+Zoom API: The Zoom API (Application Programming Interface) is a set of rules and protocols that allows software applications to interact with the Zoom platform. This solution uses the Zoom API to retrieve the list of participants and their current status (mic on/off, video on/off, screen sharing on/off).
+
+Zoom video SDK: Another option for creating a custom video conferencing solution with Zoom is to use the Zoom video SDK (Software Development Kit). The video SDK provides more control over the video conferencing experience and allows for the creation of custom interfaces and features.
+
+Programming languages: This solution requires a programming language to implement the logic for calculating participant priorities, determining box sizes, and adjusting box sizes based on user input. The choice of programming language would depend on the platform and tools being used to develop the solution. Languages that interact with the Zoom API include Python, Java, and JavaScript. I chose Python for this implementation since it is the langauage I have the most experience in. 
+
+User interface: This solution involves creating a custom user interface that allows the user to resize the boxes of the participants in a Zoom call.
+
+Web technologies: It would likely involve the use of web technologies such as HTML, CSS, and JavaScript to create the user interface and handle user input.
+
+#### To create the Grid Resizing Solution:
+1. Retrieve the list of participants and their current status (mic on/off, video on/off, screen sharing on/off) from the Zoom API.
+2. Calculate the priority for each participant based on their status, following the order given in the prompt (screen share > mic+camera on > mic on > camera on > mic+camera off).
+3. Sort the list of participants based on their priority, from highest to lowest.
+4. Determine the desired size of each box for each participant, based on their priority. For example, the largest screen share participant might get 2/3 of the screen, while the smallest mic+camera off participant might get 1/6 of the screen.
+5. Allow the user to change the size of each box individually by dragging its borders. As the user changes the size of a box, adjust the size of the other boxes accordingly to maintain the desired proportions.
+6. If the user does not manually resize any boxes, display the boxes with the predetermined sizes based on their priority.
+
+
+
+
+
 
 
 
