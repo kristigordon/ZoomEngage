@@ -1,13 +1,12 @@
-This code creates a Grid class that stores the colors of each button in a 2D list. 
-It also creates a GridGUI class that uses tkinter to create a window with a grid of buttons, and a color picker button. 
-When a button is clicked, it toggles between black and white. 
+# This code creates a Grid class that stores the colors of each button in a 2D list. 
+# It also creates a GridGUI class that uses tkinter to create a window with a grid of buttons, and a color picker button. 
+# When a button is clicked, it toggles between black and white. 
 
-When the color picker button is clicked, a color selection dialog appears 
-and sets the color of all the buttons to the selected color. 
+# When the color picker button is clicked, a color selection dialog appears 
+# and sets the color of all the buttons to the selected color. 
 
-Using tkinter, I was able to create a GridGUI class to add additional functionality to a video conferencing software, such as Zoom.
+# Using tkinter, I was able to create a GridGUI class to add additional functionality to a video conferencing software, such as Zoom.
 
-<code>
 import tkinter as tk
 from tkinter.colorchooser import askcolor
 
@@ -74,4 +73,3 @@ class GridGUI:
 gui = GridGUI(8, 8)
 # Run the GUI
 gui.run()
-</code>
